@@ -17,3 +17,4 @@ stages:
 - template: /pipelines/stages/lifecycle.yml
   parameters:
     service: ${{ variables.service }}
+    #test that this works
