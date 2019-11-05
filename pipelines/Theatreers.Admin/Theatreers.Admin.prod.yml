@@ -6,3 +6,4 @@ jobs:
         script: |
           echo "Hello ${{ parameters.environment }}"
           #test something
+          #hello world
