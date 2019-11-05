@@ -8,8 +8,9 @@ trigger:
     - feature/*
   paths:
     include:
-    - src/Theatreers.Admin/*
-    - /pipelines/Theatreers.Admin/*
+    - src/$(service)/*
+    - /pipelines/$(service).yml
+    - /pipelines/$(service)/*
 
 stages:
 - template: /pipelines/stages/lifecycle.yml
