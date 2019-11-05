@@ -8,12 +8,10 @@ trigger:
     - feature/*
   paths:
     include:
-    - '*'
     - src/Theatreers.Admin/*
-    - /ipelines/Theatreers.Admin/*
+    - /pipelines/Theatreers.Admin/*
 
 stages:
 - template: /pipelines/stages/lifecycle.yml
   parameters:
     service: ${{ variables.service }}
-    #test that this works

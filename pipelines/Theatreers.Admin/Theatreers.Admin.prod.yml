@@ -5,9 +5,3 @@ jobs:
       inputs:
         script: |
           echo "Hello ${{ parameters.environment }}"
-          #test something
-          #hello world
-          #another test
-          # Include all branches
-          # Add another comment
-          # now specify all paths
