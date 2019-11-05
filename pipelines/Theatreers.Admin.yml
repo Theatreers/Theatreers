@@ -2,7 +2,6 @@ variables:
   service: Theatreers.Admin
 
 trigger:
-  batch: true
   branches:
     include:
     - ref/head/master
