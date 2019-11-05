@@ -4,7 +4,6 @@ variables:
 trigger:
   branches:
     include:
-    - '*'
     - ref/head/master
     - ref/head/feature/*
   paths:
