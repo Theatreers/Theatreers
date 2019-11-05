@@ -8,6 +8,7 @@ trigger:
     - ref/head/feature/*
   paths:
     include:
+    - *
     - /src/Theatreers.Admin/*
     - /pipelines/Theatreers.Admin/*
 
