@@ -11,6 +11,9 @@ trigger:
     - src/Theatreers.Admin/*
     - /pipelines/Theatreers.Admin.yml
     - /pipelines/Theatreers.Admin/*
+pr:
+  - master
+  - feature/*
 
 stages:
 - template: /pipelines/stages/lifecycle.yml
