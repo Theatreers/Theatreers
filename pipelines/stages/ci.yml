@@ -8,5 +8,3 @@ stages:
       name: "CI"
       environment: ${{ parameters.environment}}
       service: ${{ parameters.service }}
-  pool:
-    vmImage: ubuntu-16.04
