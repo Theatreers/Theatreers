@@ -4,8 +4,8 @@ variables:
 trigger:
   branches:
     include:
-    - ref/head/master
-    - ref/head/feature/*
+    - master
+    - feature/*
   paths:
     include:
     - '*'
