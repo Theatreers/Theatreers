@@ -7,3 +7,4 @@ jobs:
       inputs:
         script: |
           echo "Hello ${{ parameters.environment }}"
+          #Finalcheck
