@@ -8,5 +8,6 @@ jobs:
           versionSpec: '10.x'
         displayName: 'Install Node.js'
       - script: |
+          cd "src/Theatreers.Frontend/"
           npm install
           npm run build
