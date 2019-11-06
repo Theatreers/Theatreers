@@ -1,5 +1,6 @@
 variables:
   service: Theatreers.Frontend
+  src: "src/Theatreers.Frontend/"
   system.debug: true
 
 trigger:
@@ -20,4 +21,5 @@ stages:
 - template: /pipelines/stages/lifecycle.yml
   parameters:
     service: ${{ variables.service }}
+    src: ${{ variables.src }}
     #TEST EDIT

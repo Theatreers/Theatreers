@@ -8,6 +8,7 @@ jobs:
           versionSpec: '10.x'
         displayName: 'Install Node.js'
       - script: |
-          cd "src/Theatreers.Frontend/"
+          cd "${{ parameters.src }}"
           npm install
           npm run build
+        displayName: 'Install Dependencies and Build Frontend (Vue Based Web App)'
