@@ -8,9 +8,10 @@ jobs:
           versionSpec: '10.x'
         displayName: 'Install Node.js'
       - script: |
+          cd "${{ parameters.src }}"
           npm install
           npm run build
       - task: PublishPipelineArtifact@0
         inputs:
           artifactName: '$(artifactName)'
-          targetPath: '$(System.DefaultWorkingDirectory)/dist/'
+          targetPath: '$(System.DefaultWorkingDirectory)/${{ parameters.src }}/dist/'
