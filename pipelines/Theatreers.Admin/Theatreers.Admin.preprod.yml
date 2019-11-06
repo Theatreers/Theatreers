@@ -4,6 +4,5 @@ jobs:
       vmImage: ubuntu-16.04
     steps:
     - task: CmdLine@2
-    inputs:
-      script: |
+      inputs:
         echo "Hello ${{ parameters.environment }}"
