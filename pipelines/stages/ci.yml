@@ -5,6 +5,7 @@ stages:
   jobs:
   - template: /pipelines/${{ parameters.service }}/${{ parameters.service }}.ci.yml
     parameters:
+      buildOutputPath: '$(Build.ArtifactStagingDirectory)/build-output/'
       name: "CI"
       environment: ${{ parameters.environment}}
       service: ${{ parameters.service }}
