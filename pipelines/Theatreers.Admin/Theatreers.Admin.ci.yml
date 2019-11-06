@@ -8,3 +8,4 @@ jobs:
         script: |
           echo "Hello ${{ parameters.environment }}"
           #trigger
+          #another trigger
