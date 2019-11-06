@@ -6,6 +6,7 @@ stages:
   - template: /pipelines/${{ parameters.service }}/${{ parameters.service }}.ci.yml
     parameters:
       buildOutputPath: '$(Build.ArtifactStagingDirectory)/build-output/'
+      buildPublishPath: '$(Build.ArtifactStagingDirectory)/publish-path/'
       name: "CI"
       environment: ${{ parameters.environment}}
       service: ${{ parameters.service }}
