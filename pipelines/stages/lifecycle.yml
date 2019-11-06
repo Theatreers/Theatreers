@@ -8,7 +8,7 @@ stages:
 - template: /pipelines/stages/dev.yml
   parameters:
     condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
-    dependsOn: ci
+    dependsOn: ''
     environment: dev
     service: ${{ parameters.service }}
 
