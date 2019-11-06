@@ -4,6 +4,7 @@ stages:
     condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'), contains(variables['Build.SourceBranch'], 'refs/heads/feature/'))
     environment: ci
     service: ${{ parameters.service }}
+    src: ${{ parameters.src }}
 
 - template: /pipelines/stages/dev.yml
   parameters:
@@ -11,6 +12,7 @@ stages:
     dependsOn: []
     environment: dev
     service: ${{ parameters.service }}
+    src: ${{ parameters.src }}
 
 - template: /pipelines/stages/master.yml
   parameters:
@@ -18,15 +20,18 @@ stages:
     dependsOn: []
     environment: master
     service: ${{ parameters.service }}
+    src: ${{ parameters.src }}
 
 - template: /pipelines/stages/preprod.yml
   parameters:
     dependsOn: [master]
     environment: preprod
     service: ${{ parameters.service }}
+    src: ${{ parameters.src }}
 
 - template: /pipelines/stages/prod.yml
   parameters:
     dependsOn: [preprod]
     environment: prod
     service: ${{ parameters.service }}
+    src: ${{ parameters.src }}
