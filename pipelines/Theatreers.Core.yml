@@ -1,7 +1,7 @@
 variables:
   artifactName: 'drop'
-  service: Theatreers.Frontend
-  src: "src/Theatreers.Frontend/"
+  service: Theatreers.Core
+  src: "src/Theatreers.Core/"
   system.debug: true
 
 trigger:
@@ -11,9 +11,9 @@ trigger:
     - feature/*
   paths:
     include:
-    - src/Theatreers.Frontend/*
-    - /pipelines/Theatreers.Frontend.yml
-    - /pipelines/Theatreers.Frontend/*
+    - src/Theatreers.Core/*
+    - /pipelines/Theatreers.Core.yml
+    - /pipelines/Theatreers.Core/*
 pr:
   branches:
     include:
@@ -21,9 +21,9 @@ pr:
     - feature/*
   paths:
     include:
-    - src/Theatreers.Frontend/*
-    - /pipelines/Theatreers.Frontend.yml
-    - /pipelines/Theatreers.Frontend/*
+    - src/Theatreers.Core/*
+    - /pipelines/Theatreers.Core.yml
+    - /pipelines/Theatreers.Core/*
 
 stages:
 - template: /pipelines/stages/lifecycle.yml
