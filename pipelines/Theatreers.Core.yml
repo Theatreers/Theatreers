@@ -1,6 +1,5 @@
 variables:
   artifactName: "drop"
-  artifactName: 'drop'
   service: Theatreers.Core
   src: "src/Theatreers.Core/"
   system.debug: true
