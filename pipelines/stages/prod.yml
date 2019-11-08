@@ -1,5 +1,6 @@
 stages:
-- stage: prod
+${{ each region in parameters.regions }}:
+- stage: "prod-${{ region }}"
   condition: ${{ parameters.condition }}
   dependsOn: ${{ parameters.dependsOn }}
   jobs:
@@ -8,5 +9,6 @@ stages:
       artifactName: ${{ parameters.artifactName }}
       name: "prod"
       environment: ${{ parameters.environment}}
+      region: ${{ region }}
       service: ${{ parameters.service }}
       src: ${{ parameters.src }}

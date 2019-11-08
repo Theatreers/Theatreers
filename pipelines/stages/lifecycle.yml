@@ -36,5 +36,6 @@ stages:
     artifactName: ${{ parameters.artifactName }}
     dependsOn: [preprod]
     environment: prod
+    regions: ${{ parameters.regions }}
     service: ${{ parameters.service }}
     src: ${{ parameters.src }}

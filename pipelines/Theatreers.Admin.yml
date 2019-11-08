@@ -1,5 +1,6 @@
 variables:
   artifactName: 'drop'
+  regions: ['northeurope', 'westeurope']
   service: Theatreers.Admin
   system.debug: true
 
