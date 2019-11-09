@@ -1,6 +1,5 @@
 variables:
   artifactName: "drop"
-  serviceComponent: 
   applicationServiceNameFull: "Theatreers.${{ variables.applicationServiceNameShort }}"
   applicationServiceNameShort: "Admin"
   azureServiceGroupName: "admin"
