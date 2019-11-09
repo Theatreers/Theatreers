@@ -31,7 +31,7 @@ stages:
   - template: /pipelines/stages/lifecycle.yml
     parameters:
       artifactName: ${{ variables.artifactName }}
-      azureServiceGroupName: ${{ parameters.azureServiceGroupName }}
+      azureServiceGroupName: ${{ variables.azureServiceGroupName }}
       regions: [
         { "short": "neu", "long": "northeurope"},
         { "short": "weu", "long": "westeurope" }
