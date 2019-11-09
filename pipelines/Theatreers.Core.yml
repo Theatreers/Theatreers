@@ -1,6 +1,6 @@
 variables:
   artifactName: "drop"
-  applicationServiceNameFull: "Theatreers.$(applicationServiceNameShort)"
+  applicationServiceNameFull: "Theatreers.Core"
   applicationServiceNameShort: "Core"
   azureServiceGroupName: "core"
   src: "src/Theatreers.Core/"
