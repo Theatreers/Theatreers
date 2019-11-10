@@ -6,7 +6,7 @@
         <table class="table table-hover" id="table">
           <thead>
             <tr>
-              <th v-for="column in columns">
+              <th v-for="column in columns" v-bind:key="column.itemsKey">
                 <a href="#" v-on:click="sort(column.itemsKey)">
                   {{ column.displayName }}
                 </a>
@@ -14,7 +14,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="item in sortedItems">
+            <tr v-for="item in sortedItems" v-bind:key="item.id">
               <td>{{ item.id }}</td>
               <td>{{ item.displayName }}</td>
               <td v-bind:id="item.id" v-bind:ref="item.id" contenteditable @focus="enterCell(item.id)" @blur="exitCell(item.id)">{{ item.extension_309951ebe380415e84418cf29a596f64_permissions }}</td>

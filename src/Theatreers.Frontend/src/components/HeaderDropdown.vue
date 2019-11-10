@@ -18,28 +18,28 @@ export default {
   data: () => {
     return {
       itemsCount: 42,
-      user: this.msalInstance.getAccount(),
+      user: msalInstance.getAccount(),
       editProfileLink: 'https://theatreers.b2clogin.com/theatreers.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SiPe&client_id=' + this.config.clientId + '&redirect_uri= ' + this.config.redirectUrl + '&nonce=defaultNonce&scope=openid&response_type=id_token',
       forgotPasswordLink: 'https://theatreers.b2clogin.com/theatreers.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SSPR&client_id=' + this.config.clientId + '&redirect_uri=' + this.config.redirectUrl + '&nonce=defaultNonce&scope=openid&response_type=id_token&prompt=login'
     }
   },
   mounted () {
-    if (this.msalInstance.getAccount() != null) {
-      this.user = this.msalInstance.getAccount()
+    if (msalInstance.getAccount() != null) {
+      this.user = msalInstance.getAccount()
     }
   },
   methods: {
     logout () {
       this.user = null
-      this.logout()
+      logout()
     },
     login () {
       // this.$AuthService.loginPopup() // with a popup
-      this.login() // with a redirect
-      this.user = this.msalInstance.getAccount()
+      login() // with a redirect
+      this.user = msalInstance.getAccount()
     },
     setUser () {
-      this.user = this.msalInstance.getAccount()
+      this.user = msalInstance.getAccount()
     }
   }
 }
