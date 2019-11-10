@@ -88,7 +88,7 @@ export default {
     },
     exitCell: function (cellIdentifier) {
       this.cleanPermission = this.$refs[cellIdentifier][0].innerText
-      console.log('Exiting Cell ' + cellIdentifier)
+      //console.log('Exiting Cell ' + cellIdentifier)
 
       var id = this.$refs[cellIdentifier][0].id
       var j = { 'PermissionString': this.cleanPermission }
@@ -102,10 +102,10 @@ export default {
         .then(bearerToken => {
           putApiWithToken('https://th-admin-dev-weu-func.azurewebsites.net/api/moderation/permission/' + id, jsonBody, bearerToken.accessToken)
             .catch(function (error) {
-              console.log('Error: ' + error)
+              //console.log('Error: ' + error)
             })
             .then(function (response) {
-              console.log('Succeeded')
+              //console.log('Succeeded')
             })
         })
       this.cleanPermission = null

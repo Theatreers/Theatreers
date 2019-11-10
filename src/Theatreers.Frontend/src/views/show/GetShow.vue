@@ -68,7 +68,7 @@ export default {
       ]
     })
       .catch((error) => {
-        console.log('error here ' + error)
+        //console.log('error here ' + error)
       })
   }
 }
@@ -80,7 +80,7 @@ async function getAllUrls (urls) {
     )
     return data
   } catch (error) {
-    console.log(error)
+    //console.log(error)
     throw error
   }
 }
@@ -89,12 +89,12 @@ async function getContent (url) {
   let response = await fetch(url)
 
   if (response.ok) { // if HTTP-status is 200-299
-    console.log('returning response')
-    return await response.json()
+    //console.log('returning response')
+    return response.json()
   } else {
-    console.log('HTTP-Error: ' + response.status)
-    var emptyObject = new Array()
-    return await []
+    //console.log('HTTP-Error: ' + response.status)
+    //var emptyObject = new Array()
+    return []
   }
 }
 </script>

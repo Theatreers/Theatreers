@@ -36,8 +36,8 @@ export default {
           alert('Form submitted')
         })
         .catch(function (error) {
-          console.log(error)
-          console.log('blah')
+          //console.log(error)
+          //console.log('blah')
         })
     }
   },
