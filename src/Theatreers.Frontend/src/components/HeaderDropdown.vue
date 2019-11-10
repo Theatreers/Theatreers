@@ -18,28 +18,28 @@ export default {
   data: () => {
     return {
       itemsCount: 42,
-      user: msalInstance.getAccount(),
-      editProfileLink: "https://theatreers.b2clogin.com/theatreers.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SiPe&client_id="+ config.clientId+"&redirect_uri="+ config.redirectUrl+"&nonce=defaultNonce&scope=openid&response_type=id_token",
-      forgotPasswordLink: "https://theatreers.b2clogin.com/theatreers.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SSPR&client_id="+ config.clientId+"&redirect_uri="+ config.redirectUrl+"&nonce=defaultNonce&scope=openid&response_type=id_token&prompt=login"
+      user: this.msalInstance.getAccount(),
+      editProfileLink: 'https://theatreers.b2clogin.com/theatreers.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SiPe&client_id=' + this.config.clientId + '&redirect_uri= ' + this.config.redirectUrl + '&nonce=defaultNonce&scope=openid&response_type=id_token',
+      forgotPasswordLink: 'https://theatreers.b2clogin.com/theatreers.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SSPR&client_id=' + this.config.clientId + '&redirect_uri=' + this.config.redirectUrl + '&nonce=defaultNonce&scope=openid&response_type=id_token&prompt=login'
     }
   },
   mounted () {
-    if (msalInstance.getAccount() != null){
-      this.user = msalInstance.getAccount()
+    if (this.msalInstance.getAccount() != null) {
+      this.user = this.msalInstance.getAccount()
     }
   },
   methods: {
     logout () {
       this.user = null
-      logout()
+      this.logout()
     },
     login () {
       // this.$AuthService.loginPopup() // with a popup
-      login() // with a redirect
-      this.user = msalInstance.getAccount()
+      this.login() // with a redirect
+      this.user = this.msalInstance.getAccount()
     },
     setUser () {
-      this.user = msalInstance.getAccount()
+      this.user = this.msalInstance.getAccount()
     }
   }
 }
