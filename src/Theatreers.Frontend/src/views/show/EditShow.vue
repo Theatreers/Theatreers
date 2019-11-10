@@ -36,8 +36,8 @@ export default {
           alert('Form submitted')
         })
         .catch(function (error) {
-          //console.log(error)
-          //console.log('blah')
+          // // console.log(error)
+          // // console.log('blah')
         })
     }
   },
@@ -51,7 +51,7 @@ export default {
       })
       .then((jsonData) => {
         this.isLoading = false
-        this.show = jsonData,
+        this.show = jsonData
         this.breadcrumbs = [
           {
             text: 'Theatreers',

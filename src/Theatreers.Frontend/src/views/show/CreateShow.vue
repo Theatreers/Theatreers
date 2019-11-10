@@ -45,10 +45,10 @@ export default {
         .then(bearerToken => {
           postApiWithToken('https://api.theatreers.com/show/show', jsonBody, bearerToken.accessToken)
             .catch(function (error) {
-              //console.log('Error: ' + error)
+              // console.log('Error: ' + error)
             })
             .then(function (response) {
-              //console.log('Succeeded')
+              // console.log('Succeeded')
             })
         })
       this.cleanPermission = null
