@@ -3,7 +3,7 @@ variables:
   applicationServiceNameFull: "Theatreers.Frontend"
   applicationServiceNameShort: "Frontend"
   azureServiceGroupName: "web"
-  src: "src/Theatreers.Web/"
+  src: "src/Theatreers.Frontend/"
   system.debug: true
 
 trigger:
