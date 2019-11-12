@@ -10,7 +10,7 @@ jobs:
           script: |
             Install-Module -Name Pester -Force -Verbose -Scope CurrentUser 
             Import-Module Pester
-            Invoke-Pester -Script @{Path ='deploy/buildingblocks/arm-template-tests.ps1'; Parameters = @{folder = './deploy/' }} -OutputFile TEST-CoreArmTemplates.xml -OutputFormat NUnitXml
+            Invoke-Pester -Script @{Path ='deploy/buildingblocks/arm-template-tests.ps1'; Parameters = @{folder = './deploy/buildingblocks' }} -OutputFile TEST-CoreArmTemplates.xml -OutputFormat NUnitXml
       - task: PublishTestResults@2
         displayName: 'Publish Test Results **/*.xml'
         inputs:
