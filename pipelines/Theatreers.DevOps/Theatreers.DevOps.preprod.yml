@@ -17,7 +17,7 @@ jobs:
               inputs:
                 azureSubscription: 'Theatreers Dev AzureDevOps ServPrin'
                 resourceGroupName: '$(managementResourceGroupName)'
-                location: '${{ parameters.region }})'
+                location: '${{ parameters.region.long }})'
                 csmFile: '$(Pipeline.Workspace)/storageAccount.json'
                 overrideParameters: '-accountName $(managementStorageAccountName)'
             - task: AzureFileCopy@2
