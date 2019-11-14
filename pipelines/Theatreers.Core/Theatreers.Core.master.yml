@@ -35,6 +35,3 @@ jobs:
           command: push 
           publishVstsFeed: 'Theatreers.Artifacts' 
           versioningScheme: byBuildNumber
-          #Some trigger
-          #Update
-          #Some update...
