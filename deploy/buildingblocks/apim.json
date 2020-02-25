@@ -5,7 +5,7 @@
     "namePrefix": {
       "type": "string",
       "metadata": {
-        "description": "Prefix of the resource"
+        "description": "Prefix of the resource!!"
       }
     },
     "location": {
