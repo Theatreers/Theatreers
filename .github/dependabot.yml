@@ -1,0 +1,55 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Microsoft.Identity.Client
+    versions:
+    - 4.25.0
+    - 4.26.0
+    - 4.27.0
+    - 4.28.0
+    - 4.28.1
+    - 4.29.0
+    - 4.30.0
+  - dependency-name: EPPlus
+    versions:
+    - 5.5.2
+    - 5.5.3
+    - 5.5.4
+    - 5.5.5
+    - 5.6.0
+    - 5.6.1
+    - 5.6.2
+  - dependency-name: Microsoft.Azure.WebJobs.Extensions.ServiceBus
+    versions:
+    - 4.2.1
+  - dependency-name: Microsoft.Azure.WebJobs.Extensions.DurableTask
+    versions:
+    - 2.4.1
+    - 2.4.2
+  - dependency-name: Microsoft.NET.Test.Sdk
+    versions:
+    - 16.8.3
+    - 16.9.1
+  - dependency-name: Microsoft.Azure.WebJobs.Extensions.CosmosDB
+    versions:
+    - 3.0.9
+  - dependency-name: Moq
+    versions:
+    - 4.16.0
+  - dependency-name: Microsoft.Azure.DocumentDB
+    versions:
+    - 2.13.1
+  - dependency-name: Microsoft.NET.Sdk.Functions
+    versions:
+    - 3.0.11
+  - dependency-name: SixLabors.ImageSharp
+    versions:
+    - 1.0.2
+  - dependency-name: Microsoft.Azure.DocumentDB.Core
+    versions:
+    - 2.13.1
